@@ -16,8 +16,8 @@
 					</div>
 				</div> 
 				<div class="col-sm-4 col-xs-12">
-					<button class="btn btn-outline-dark" v-bind:disabled="loading" v-on:click="generate_items()">Generate Items</button>
-                    <div v-if="loading">Loading</div>
+					<button class="btn btn-outline-dark" v-bind:disabled="loading" v-on:click="function () {loading = true; generate_items();}">Generate Items</button>
+                    <div v-if="loading" class="float-right"><i class="fas fa-spinner fa-pulse"></i></div>
                 </div>
 			</div>
 			
@@ -107,14 +107,12 @@ export default {
 			});
 			
 			item = self.random_modifier('Items', wealth, include, avoid);
-			// item = filtered_items[Math.floor(Math.random() * filtered_items.length)]['Description'];
 			
 			var regex = /\{(\w*)\}/i;
 			var mod = item.match(regex);
 			
 			if (mod) {
 				while (mod) {
-                    console.log('mod1 wealth', wealth)
 					item = item.replace(mod[0], self.random_modifier(mod[1], wealth, include, avoid))
 					mod = item.match(regex);
 				}
@@ -145,6 +143,9 @@ export default {
 			var self = this;
 			var foo = "";
 
+            if (!(key in self.item_data)) {
+                alert('Attempted to access undefined key "'+ key +'" in item_data');
+            }
             var list = self.item_data[key].filter(function (item) {
 				var allowed = item["Tags"].includes(wealth);
 				var i, l = 0;

@@ -153,10 +153,16 @@ export default {
 		random_modifier: function (key, style) {
 			var self = this;
 			var foo = "";
-			
+            
+            try {
 			var list = self.book_data[key].filter(function (item) {
 				return item["Tags"].includes(style);
-			});
+            });
+            } catch (error) {
+                console.log('error', error);
+                console.log('key', key);
+                console.log('style', style);
+            }
 			foo = list[Math.floor(Math.random() * list.length)]['Description']
 			
 			return foo;

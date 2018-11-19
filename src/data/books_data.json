@@ -139,7 +139,7 @@
 		{"Tags": ["Mundane"], "Description": "Altus Branton"},
 		{"Tags": ["Mundane"], "Description": "Colton Wood"},
 		{"Tags": ["Mundane"], "Description": "Cthulu"},
-		{"Tags": ["Historical"], "Description": "The {Leader}"},
+		{"Tags": ["Historical"], "Description": "{King}"},
 		{"Tags": ["Mundane"], "Description": "Colton Wood"},
 		{"Tags": ["Arcane", "Occult"], "Description": "Syrence Ashfrey"},
 		{"Tags": ["Arcane", "Mundane", "Occult", "Historical"], "Description": "%Name%"},
