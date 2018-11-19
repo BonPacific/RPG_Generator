@@ -1,0 +1,28 @@
+{
+"Location":
+	{
+	 "Metropolis": {"Values": {"Wealth": 10, "Asceticism": 0, "Filth": 10}, "Meta": {}},
+	 "City": {"Values": {"Wealth": 8, "Asceticism": 2, "Filth": 6}, "Meta": {}},
+	 "Town": {"Values": {"Wealth": 6, "Asceticism": 4, "Filth": 3}, "Meta": {}},
+	 "Hamlet": {"Values": {"Wealth": 4, "Asceticism": 4, "Filth": 4}, "Meta": {}},
+	 "Fortress": {"Values": {"Wealth": 4, "Asceticism": 10, "Filth": 2}, "Meta": {"Tags": "martial"}}
+	 },
+"District":
+	{"Artisan": {"Values": {"Wealth": 4, "Asceticism": -2, "Filth": -2}, "Meta": {}},
+	 "Market": {"Values": {"Wealth": 4, "Asceticism": -4, "Filth": 4}, "Meta": {}},
+	 "Industrial": {"Values": {"Wealth": -4, "Asceticism": 0, "Filth": 8}, "Meta": {"Example": "Warehouses, Docks, Slaughterhouses"}},
+	 "Religious/Temple": {"Values": {"Wealth": 4, "Asceticism": 4, "Filth": -6}, "Meta": {}},
+	 "Government": {"Values": {"Wealth": 16, "Asceticism": 0, "Filth": -6}, "Meta": {}},
+	 "Residential": {"Values": {"Wealth": 16, "Asceticism": 0, "Filth": -6}, "Meta": {}},
+	 "Arcane": {"Values": {"Wealth": 2, "Asceticism": -2, "Filth": -2}, "Meta": {"Tags": "arcane"}}
+	 },
+"Wealth":
+	{
+	 "Fantastic": {"Values": {"Wealth": 16, "Asceticism": -10, "Filth": -6}, "Meta": {}},
+	 "Rich": {"Values": {"Wealth": 12, "Asceticism": -7, "Filth": 0}, "Meta": {}},
+	 "Burgher": {"Values": {"Wealth": 8, "Asceticism": -5, "Filth": 2}, "Meta": {}}, 
+	 "Average": {"Values": {"Wealth": 0, "Asceticism": 0, "Filth": 4}, "Meta": {}},
+	 "Poor": {"Values": {"Wealth": -2, "Asceticism": 2, "Filth": 7}, "Meta": {}}, 
+	 "Destitute": {"Values": {"Wealth": -6, "Asceticism": 6, "Filth": 10}, "Meta": {}}
+	 }
+}

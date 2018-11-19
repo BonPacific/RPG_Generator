@@ -1,0 +1,979 @@
+{	
+	"LifeStages" : [
+		{"Description":"Young Child","Tags":["Young Child"], "ItemAvoid": ["Alcohol"], "CoinModifier": 0.25, "ItemModifier": -1, "MaxLifeEvents": 1},
+		{"Description":"Adolescent", "Tags":["Adolescent"], "ItemAvoid": ["Alcohol"], "CoinModifier": 0.5, "ItemModifier": -1, "MaxLifeEvents": 2},
+		{"Description":"Adult", 	 "Tags":["Adult"], 		"ItemAvoid": [], "CoinModifier": 1, "ItemModifier": 1, "MaxLifeEvents": 3},
+		{"Description":"Middle Age", "Tags":["Middle Age"], "ItemAvoid": [], "CoinModifier": 1, "ItemModifier": 0, "MaxLifeEvents": 4},
+		{"Description":"Old", 		 "Tags":["Old"], 		  "ItemAvoid": [], "CoinModifier": 0.75, "ItemModifier": 0, "MaxLifeEvents": 5}
+	],
+	"Wealth" : [
+		{"Description":"Rich", "Tags": ["Rich"], "CoinModifier": 6, "ItemModifier": 1},
+		{"Description":"Average", "Tags": ["Average"], "CoinModifier": 2, "ItemModifier": 1},
+		{"Description":"Poor", "Tags": ["Poor"], "CoinModifier": 0.5, "ItemModifier": 0}
+	],
+	"Gender" : [
+		"Male",
+		"Male",
+		"Male",
+		"Male",
+		"Male",
+		"Male",
+		"Male",
+		"Female",
+		"Female",
+		"Female",
+		"Female",
+		"Female",
+		"Female",
+		"Female",
+		"Androgenous"
+	],
+	"Species" : [
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Human"
+		},
+		{"Tags": [], 
+		 "Description": "Dwarf"
+		},
+		{"Tags": [], 
+		 "Description": "Dwarf"
+		},
+		{"Tags": [], 
+		 "Description": "Dwarf"
+		},
+		{"Tags": [], 
+		 "Description": "Halfling"
+		},
+		{"Tags": [], 
+		 "Description": "Halfling"
+		},
+		{"Tags": [], 
+		 "Description": "Dragonborn"
+		},
+		{"Tags": [], 
+		 "Description": "Elf"
+		},
+		{"Tags": [], 
+		 "Description": "Elf"
+		}
+	],
+	"Professions" : [
+		{"Tags": ["Adult", "Middle Age", "Average", "Poor"], 
+		 "Description": "Soldier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Farmer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
+		 "Description": "Scholar/Sage"
+		},
+		{"Tags": ["Adult", "Adolescent", "Poor", "Average"], 
+		 "Description": "Apprentice"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Adventurer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Baker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Cook"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
+		 "Description": "Brewer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Poor"], 
+		 "Description": "Porter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Merchant"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Rich"], 
+		 "Description": "Burgher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Artist"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Smith"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Jeweller"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Carver"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Potter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Leatherworker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Scribe"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Chandler"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Butcher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Miller"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Farrier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Fletcher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Builder"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Rich", "Average"], 
+		 "Description": "Foreman"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Swineherd"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average"], 
+		 "Description": "Luthier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Cartographer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Mason"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Architect"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Moneylender"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Spinner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Tailor"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Ropemaker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Vintner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Painter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Handyman"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Laborer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Weaver"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Bodger"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Cartwright"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Confectioner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Carpenter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Cheesemaker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Clothier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Cooper"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Dyer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Embroiderer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Engraver"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Joiner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Tinker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Gravedigger"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Hatter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old",  "Poor"], 
+		 "Description": "Lampwright"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average"], 
+		 "Description": "Perfumer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Plumber"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Plasterer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Roofer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Herbalist"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Physician"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Printmaker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Average", "Poor"], 
+		 "Description": "Burgler"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Fence"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Hunter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Poacher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor"], 
+		 "Description": "Pickpocket"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average"], 
+		 "Description": "Charlatan"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Prostitute"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Average", "Poor"], 
+		 "Description": "Musician"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Actor"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average"], 
+		 "Description": "Bailiff"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Guard"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Clerk"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Apothecary"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Innkeeper"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Barkeep"
+		},
+		{"Tags": ["Adult", "Middle Age", "Adolescent", "Poor"], 
+		 "Description": "Milkmaid"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Scullerymaid"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Maid"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Tutor"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Captain"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Haberdasher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Mercer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Poet"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Barber-Chirurgeon"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Laundress/Launderer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Bodyservant"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Cartier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Dog Trainer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Horse Trainer"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Messenger"
+		},
+		{"Tags": ["Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Quartermaster"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Average", "Poor"], 
+		 "Description": "Stablehand"
+		},
+		{"Tags": ["Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Surgeon"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Rat Catcher"
+		},
+		{"Tags": ["Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Veteran"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Herald"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Cobbler"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Locksmith"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Tanner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Bleacher"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Beekeeper"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Brazier"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Broommaker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Goldsmith"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Cabinetmaker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Charcoal Burner"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Distiller"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Smelter"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Restauranteur"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Dairymaid"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+		 "Description": "Teamster"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Tax Collector"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Glassblower"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Furniture Maker"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Crofter"
+		},
+		{"Tags": ["Middle Age", "Old", "Average", "Poor", "Rich"], 
+		 "Description": "Landlord"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor"], 
+		 "Description": "Pilgrim"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+		 "Description": "Gardener"
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child", "Poor"], 
+		 "Description": "Beggar"
+		},
+		{"Tags": ["Adolescent", "Young Child", "Poor"], 
+		 "Description": "Urchin"
+		},
+		{"Tags": ["Middle Age", "Old", "Average", "Rich"], 
+		 "Description": "Guild Master"
+		},
+		{"Tags": ["Young Child", "Adolescent", "Rich", "Average", "Poor"], 
+		 "Description": "No Occupation"
+		}
+	],
+	"LifeEvents" : [
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Moved a great distance %States%", 
+		 "States": [
+			" and settled down",
+			" and had to return home"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child"], 
+		 "Limit" : 2,
+		 "Likelyhood" : 1,
+		 "Description": "Lost their {RelativeType} {DeathReason}", 
+		 "States": [
+			
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Suffered an illness and %States%", 
+		 "States": [
+			"made a full recovery",
+			"was disfigured",
+			"has a limp",
+			"is still weak"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Travelled %States%", 
+		 "States": [
+			"Around the country",
+			"To a distant Land",
+			"From home to this place"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Left the family business", 
+		 "States": [
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Had a falling out with their {RelativeType}", 
+		 "States": [
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Left the family business", 
+		 "States": [
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Had a religious experience. %States% {God}", 
+		 "States": [
+			"and is devoted to",
+			"and is devoted to",
+			"and harbors a deep resentment towards"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Apprenticed as a %States%", 
+		 "States": [
+			"#profession#",
+			"#profession#",
+			"#profession#",
+			"{Professions}"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Likelyhood" : 1,
+		 "Description": "Travelled %States%", 
+		 "States": [
+			"Around the country",
+			"To a distant Land",
+			"From home to this place"
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 3,
+		 "Likelyhood" : 2,
+		 "Description": "%States% battle", 
+		 "States": [
+			"Fought in a",
+			"Fought in a",
+			"Fought in a",
+			"Wounded in a",
+			"Wounded in a",
+			"Decorated in",
+			"Shaken by"
+		 ]
+		}
+
+	],
+	"Relation" : [
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Limit" : 1,
+		 "Description": "%States% Spouse", 
+		 "States": [
+			"", 
+			"", 
+			"", 
+			"", 
+			"Separated", 
+			"Together", 
+			"Widowed",
+			"Widowed" 
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old"], 
+		 "Description": "Child", 
+		 "Limit" : 6,
+		 "States": [
+		 ]
+		},
+		{"Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child"], 
+		 "Description": "%States% Mentor", 
+		 "Limit" : 2,
+		 "States": [
+			"Estranged",
+			"Good Terms",
+			"Fondly Remembered",
+			"Nemesis"
+		 ]
+		}
+	],
+	"DeathReason" : [
+		{"Tags": [], 
+		 "Description": "to the plague"
+		},
+		{"Tags": [], 
+		 "Description": "in the war"
+		},
+		{"Tags": [], 
+		 "Description": "in the war"
+		},
+		{"Tags": [], 
+		 "Description": "in a duel"
+		},
+		{"Tags": [], 
+		 "Description": "to bandits"
+		},
+		{"Tags": [], 
+		 "Description": "to gangsters"
+		}
+	],
+	"RelativeType" : [
+		{"Tags": [], 
+		 "Description": "parent"
+		},
+		{"Tags": [], 
+		 "Description": "sibling"
+		},
+		{"Tags": [], 
+		 "Description": "brother"
+		},
+		{"Tags": [], 
+		 "Description": "sister"
+		},
+		{"Tags": [], 
+		 "Description": "aunt"
+		},
+		{"Tags": [], 
+		 "Description": "uncle"
+		},
+		{"Tags": [], 
+		 "Description": "close friend"
+		}
+	],
+	"God" : [
+		{"Tags": [], "Description": "Pelor"},
+		{"Tags": [], "Description": "The Raven Queen"},
+		{"Tags": [], "Description": "Illuvatar"},
+		{"Tags": [], "Description": "Hextor"},
+		{"Tags": [], "Description": "Tyr"},
+		{"Tags": [], "Description": "Bhaal"},
+		{"Tags": [], "Description": "Ilmater"},
+		{"Tags": [], "Description": "Helm"},
+		{"Tags": [], "Description": "Malar"},
+		{"Tags": [], "Description": "Mask"},
+		{"Tags": [], "Description": "Mystra"},
+		{"Tags": [], "Description": "Sune"},
+		{"Tags": [], "Description": "Talona"},
+		{"Tags": [], "Description": "Tymora"},
+		{"Tags": [], "Description": "Umberlee"},
+		{"Tags": [], "Description": "Tyr"},
+		{"Tags": [], "Description": "Kord"}
+	],
+	"FacialHair" : [
+		{"Tags": ["Male", "Adult", "Old", "Middle Age"], 
+		 "Description": "a {BeardModifiers} goatee"
+		},
+		{"Tags": ["Male", "Adult", "Old", "Middle Age"], 
+		 "Description": "a {BeardModifiers} mushtache"
+		},
+		{"Tags": ["Male", "Adult", "Old", "Middle Age"], 
+		 "Description": "{BeardModifiers} mutton chops"
+		},
+		{"Tags": ["Male", "Adult", "Old", "Middle Age"], 
+		 "Description": "a {BeardModifiers} beard"
+		},
+		{"Tags": ["Male", "Adult", "Old", "Middle Age"], 
+		 "Description": "a {BeardModifiers} beard"
+		},
+		{"Tags": ["Male", "Adult", "Adolescent"], 
+		 "Description": "stubble"
+		},
+		{"Tags": ["Male", "Adult", "Adolescent", "Old", "Middle Age"], 
+		 "Description": ""
+		},
+		{"Tags": ["Male", "Adult", "Adolescent", "Old", "Middle Age"], 
+		 "Description": ""
+		},
+		{"Tags": ["Male", "Adult", "Adolescent", "Old", "Middle Age"], 
+		 "Description": ""
+		},
+		{"Tags": ["Male", "Adult", "Adolescent", "Old", "Middle Age"], 
+		 "Description": ""
+		},
+		{"Tags": ["Male", "Adult", "Adolescent", "Old", "Middle Age"], 
+		 "Description": ""
+		}
+	],
+	"Hair" : [
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairLength} top-knot"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairModifiers} top-knot"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "{HairLength} and messy"
+		},
+		{"Tags": ["Male"], 
+		 "Description": "short"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairLength} mop"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairLength} ponytail"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairModifiers} ponytail"
+		},
+		{"Tags": ["Male", "Androgenous"], 
+		 "Description": "in a squire cut"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairKempt} bun"
+		},
+		{"Tags": ["Female"], 
+		 "Description": "in a {HairModifiers} bob"
+		},
+		{"Tags": ["Female"], 
+		 "Description": "in an elaborate updo"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairLength} plaite"
+		},
+		{"Tags": ["Male", "Female", "Androgenous"], 
+		 "Description": "in a {HairKempt} plaite"
+		},
+		{"Tags": ["Female", "Androgenous"], 
+		 "Description": "in a {HairLength} twin braids"
+		}
+	],
+	"BeardModifiers" : [
+		"bushy",
+		"shaggy",
+		"large",
+		"thin",
+		"well-groomed",
+		"patchy",
+		"long",
+		"full"
+	],
+	"HairKempt" : [
+		"loose",
+		"tight",
+		"messy"
+	],
+	"HairLength" : [
+		"short",
+		"short",
+		"very long",
+		"long",
+		"medium length",
+		"medium length",
+		"medium length"
+	],
+	"HairModifiers" : [
+		"thin",
+		"shaggy",
+		"bushy",
+		"well-groomed",
+		"close-cropped",
+		"full"
+	],
+	"Appearance" : [
+		"They are {BodyType1} and {Countenance}",
+		"They have a {BodyType2} build and {Countenance} features"
+	],
+	"BodyType1" : [
+		{"Description": "thin",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "lanky",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "lean",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "careworn",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
+		},
+		{"Description": "gaunt",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "stocky",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "massive",   
+		 "Tags": ["Rich", "Average", "Poor", "Male", "Adult", "Middle Age" ]
+		},
+		{"Description": "small",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "petite",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "thickset",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "chubby",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
+	],
+	"BodyType2" : [
+		{"Description": "thin",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "massive",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "small",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "large",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "lanky",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "stout",     
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 }
+	],
+	"Countenance" : [
+		{"Description": "{Rugged}", 
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "{Rugged}", 
+		 "Tags": [ "Average", "Poor", "Male", "Adult", "Middle Age", "Old"]
+		},
+		{"Description": "{Attractive}", 
+		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "{Attractive}", 
+		"Tags": ["Rich", "Average", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "{Attractive}", 
+		"Tags": ["Rich", "Average", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Adolescent"]
+		},
+		{"Description": "{Serious}",
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
+		},
+		{"Description": "{Serious}",
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "{Harrowed}",   
+		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
+		},
+		{"Description": "{Harrowed}",   
+		"Tags": ["Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent"]
+		},
+		{"Description": "{Harrowed}",	
+		"Tags": ["Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		}
+	],
+	"Harrowed" : [
+		{"Description": "harrowed", 
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "haunted",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "gaunt",    
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "pallid",   
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "striking",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
+	],
+	"Serious" : [
+		{"Description": "serious", 
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "severe",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "striking",
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "sharp",   
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "earnest",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
+	],
+	"Attractive" : [
+		{"Description": "lovely",  
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "attractive",  "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age"]
+		},
+		{"Description": "beautiful",   "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "charming",
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "alluring",
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age"]
+		},
+		{"Description": "comely",   
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Adolescent"]}
+	],
+	"Rugged" : [
+		{"Description": "rugged",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
+		},
+		{"Description": "ruddy",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		},
+		{"Description": "craggy",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old"]
+		},
+		{"Description": "worn",      
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
+		},
+		{"Description": "weather-beaten",  
+		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
+		},
+		{"Description": "harsh",        
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old"]}
+	],
+	"Disfigurement" : [
+		{"Description": "Large scar on their {BodyPart}"},
+		{"Description": "Missing {BodyExtremity}"}
+	],
+	"BodyPart" : [
+		"cheek",
+		"jaw",
+		"forehead",
+		"shoulder",
+		"forehead",
+		"forearm"
+	],
+	"BodyExtremity" : [
+		"eye",
+		"ear",
+		"ear",
+		"ear",
+		"finger",
+		"finger",
+		"finger",
+		"finger",
+		"finger",
+		"finger",
+		"finger",
+		"hand",
+		"foot"
+	],
+	"Quirks" : [
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "They are a glutton, constantly eating.",
+		 "Item": "Food",
+		 "Number": "3"
+		},
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "They are an alcoholic, never without drink.",
+		 "Item": "Alcohol",
+		 "Number": "2"
+		},
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "They are devoted, obsessing about their faith.",
+		 "Item": "Religious",
+		 "Faith": true,
+		 "Number": "1"
+		}
+	],
+	"Secrets" : [
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "Has been stealing money from their employer for years now."
+		},
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "Has a stash of valuables stored in a hidden place. No one else knows about it."
+		},
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "They are outwardly devout, but actually worship a Demon."
+		},
+		{"Tags": ["Female", "Androgenous", "Male"], 
+		 "Description": "Has been diagnosed with the wasting sickness, an incurable disease that will consume their mind before year's end. They are planning to dissappear soon, so as not to become a burden on their family."
+		},
+		{"Tags": ["Female", "Androgenous", "Male", "Adult", "Old"], 
+		 "Description": "Their business partner and they had a falling out last year. The partner left town and was never seen again, or at least that's what everyone thinks."
+		}
+	]
+	
+}

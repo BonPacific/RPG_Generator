@@ -1,0 +1,45 @@
+{
+"Size":
+	[
+		{"Description":"Metropolis","Wealth": 10, "Asceticism": 0, "Filth": 10},
+		{"Description":"City", "Wealth": 8, "Asceticism": 2, "Filth": 6},
+		{"Description":"Town", "Wealth": 6, "Asceticism": 4, "Filth": 3},
+		{"Description":"Hamlet", "Wealth": 4, "Asceticism": 4, "Filth": 4},
+		{"Description":"Fortress", "Wealth": 4, "Asceticism": 10, "Filth": 2, "Tags": "martial"}
+	],
+"DistrictType":
+	[
+        {"Description":"Artisan", 
+            "Wealth": 4, 
+            "Asceticism": -2, 
+            "Filth": -2, 
+			"LocationTypes":[
+				{"Type": "Food", "Min": 1, "Max": 3, "Tags": []},
+				{"Type": "Craft", "Min": 3, "Max": 5, "Tags": []},
+				{"Type": "Public", "Min": 0, "Max": 1, "Tags": []},
+				{"Type": "Service", "Min": 1, "Max": 2, "Tags": []}
+			]},
+        {"Description":"Market", 
+            "Wealth": 4, 
+            "Asceticism": -4, 
+            "Filth": 4, 
+			"LocationTypes":["Public", "Food", "Store"]},
+		{"Description":"Industrial", "Wealth": -4, "Asceticism": 0, "Filth": 8, 
+			"LocationTypes":["Craft"], "Tags": ["Dirty"] },
+		{"Description":"Religious/Temple", "Wealth": 4, "Asceticism": 4, "Filth": -6, 
+			"LocationTypes":[]},
+		{"Description":"Government", "Wealth": 16, "Asceticism": 0, "Filth": -6, 
+			"LocationTypes":[]},
+		{"Description":"Residential", "Wealth": 16, "Asceticism": 0, "Filth": -6, 
+			"LocationTypes":[]},
+		{"Description":"Arcane", "Wealth": 2, "Asceticism": -2, "Filth": -2, 
+			"LocationTypes":[], 
+			"Tags": ["arcane"]}
+	],
+"Wealth":
+	[
+		{"Description":"Rich", "Wealth": 12, "Asceticism": -7, "Filth": 0},
+		{"Description":"Average", "Wealth": 0, "Asceticism": 0, "Filth": 4},
+		{"Description":"Poor", "Wealth": -2, "Asceticism": 2, "Filth": 7}
+	]
+}
