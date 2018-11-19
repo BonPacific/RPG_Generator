@@ -50,7 +50,7 @@ m448 -352 c106 -50 222 -259 223 -402 0 -55 -23 -128 -53 -167 -25 -33 -101
 		<!-- <object class="logo float-left" data="../assets/d10.svg" type="image/svg+xml">
 			<img src="../assets/d10.png" />
 		</object> -->
-		<div class="navigation">
+		<div class="navigation" v-bind:class="{'mobile_menu': mobile_menu}">
 			<h1 class="title">RPG Generator</h1>
 			<ul class="nav nav-tabs" style="text-align:right">
 				<li class="nav-item"> 
@@ -72,6 +72,9 @@ m448 -352 c106 -50 222 -259 223 -402 0 -55 -23 -128 -53 -167 -25 -33 -101
 					<a class="nav-link" href="#" v-bind:class="{active: view_screen == 'Location'}" v-on:click="view_screen = 'Location'">Location</a> 
 				</li>
 			</ul> 
+            <div class="btn btn-dark-outine mobile-menu-toggle" v-on:click="mobile_menu = !mobile_menu">
+				<i class="fas fa-bars text-lg" v-bind:class="{dark: dark_mode == false}"></i>
+			</div>
 		</div>
 		<div class="top-right">
 			<div class="btn btn-sm btn-dark-outline" v-on:click="view_screen = 'Inventory'">
@@ -90,7 +93,8 @@ export default {
   data() {
     return {
       view_screen: "District",
-      dark_mode: false
+      dark_mode: false,
+      mobile_menu: false
     };
   },
   watch: {
@@ -122,6 +126,58 @@ export default {
 	top:0;
 }
 
+.nav-tabs {
+    /* overflow-y:auto;
+    height:2rem;
+    display:inline-block; */
+}
+
+.mobile-menu-toggle {
+    display:none;
+}
+
+@media (max-width: 700px) {
+    .mobile_menu .nav-tabs {
+        display:none;
+    }
+    .nav.nav-tabs {
+        position: fixed;
+        right:0;
+        top:6.4rem;
+        background-color: white;
+        width:150px;
+        box-shadow:0 0 15px -2px #aaa;
+    }
+    .nav-tabs li {
+        width:150px;
+        padding:0;
+        margin:0;
+        border:none;
+    }
+
+    .nav-tabs li a.nav-link.active {
+        border:0;
+        background-color:rgb(238, 238, 238);
+        border-radius:0;
+    }
+
+    .dark_mode .nav.nav-tabs {
+        background-color:#333;
+        box-shadow:0 0 15px -2px #000;
+    }
+
+    .dark_mode .nav-tabs li a.nav-link.active {
+        background-color: rgb(44, 62, 80);
+    }
+
+    .mobile-menu-toggle {
+        display:block;
+        position:fixed;
+        right:0;
+    }
+    
+}
+
 .header {
   border-bottom: 4px solid #b71c1c;
   vertical-align: top;
@@ -131,6 +187,10 @@ export default {
 	position:fixed;
 	z-index:100;
 
+}
+
+.fas.dark {
+    /* color:white; */
 }
 
 .title {
