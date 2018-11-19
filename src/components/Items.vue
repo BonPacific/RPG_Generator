@@ -16,8 +16,9 @@
 					</div>
 				</div> 
 				<div class="col-sm-4 col-xs-12">
-					<button class="btn btn-outline-dark" v-on:click="generate_items()">Generate Items</button>
-				</div>
+					<button class="btn btn-outline-dark" v-bind:disabled="loading" v-on:click="generate_items()">Generate Items</button>
+                    <div v-if="loading">Loading</div>
+                </div>
 			</div>
 			
 		</b-card>
@@ -55,6 +56,7 @@ export default {
 	data () {
 		return {
 			item_data: null,
+			loading: false,
 			selected_wealth: 'Average',
 			wealth_levels: ["Poor", "Average", "Rich"],
 			num_to_generate: 10,
@@ -64,22 +66,30 @@ export default {
 	created: function () {
 		var self = this;
 		self.item_data = json_item_data;
-		self.generate_items();
+	},
+	mounted: function () {
+		var self = this;
+		this.$nextTick(function () {
+			//using nextTick to make sure the child components are fully mounted and ready.
+			self.generate_items();
+		});
 	},
 	methods: {
 		generate_items: function () {
-			var self = this;
+            var self = this;
+            self.loading = true;
 			self.generated_items = [];
 			for(var i = 0; i < self.num_to_generate; i++) {
 				var foo = self.generate_item(self.selected_wealth);
 				self.generated_items.push(foo);
-			}
+            }
+            self.loading = false;
 		},
-		generate_item: function (pwealth = null, include = [], avoid = ["Food"]) {
+		generate_item: function (pwealth = null, include = [], avoid = []) {
 			var self = this;
 			var item = "";
-			var wealth = (pwealth) ? (pwealth) : (self.selected_wealth);
-			
+            var wealth = (pwealth) ? (pwealth) : (self.selected_wealth);
+            
 			var filtered_items = self.item_data["Items"].filter(function (item) {
 				var allowed = item["Tags"].includes(wealth);
 				var i, l = 0;
@@ -96,14 +106,16 @@ export default {
 				return allowed;
 			});
 			
-			item = filtered_items[Math.floor(Math.random() * filtered_items.length)]['Description'];
+			item = self.random_modifier('Items', wealth, include, avoid);
+			// item = filtered_items[Math.floor(Math.random() * filtered_items.length)]['Description'];
 			
 			var regex = /\{(\w*)\}/i;
 			var mod = item.match(regex);
 			
 			if (mod) {
 				while (mod) {
-					item = item.replace(mod[0], self.random_modifier(mod[1]))
+                    console.log('mod1 wealth', wealth)
+					item = item.replace(mod[0], self.random_modifier(mod[1], wealth, include, avoid))
 					mod = item.match(regex);
 				}
 			}
@@ -129,15 +141,42 @@ export default {
 			
 			return item;
 		},
-		random_modifier: function (key) {
+		random_modifier: function (key, wealth, include = [], avoid = []) {
 			var self = this;
 			var foo = "";
-			var list = self.item_data[key].filter(function (item) {
-				return item["Tags"].indexOf(self.selected_wealth) != -1;
-			});
-			var i = list[Math.floor(Math.random() * list.length)];
-			foo = i['Description']
+
+            var list = self.item_data[key].filter(function (item) {
+				var allowed = item["Tags"].includes(wealth);
+				var i, l = 0;
+				while ((i <= include.length) && (allowed == true)) {
+					allowed = allowed && item["Tags"].includes(include[i])
+					i++;
+				}
+				
+				while ((l <= avoid.length) && (allowed == true)) {
+					allowed = allowed && !item["Tags"].includes(avoid[l]);
+					l++;
+				}
 			
+				return allowed;
+            });
+
+            var total_prob = list.reduce(function (total, x) {return total + x['Probability']}, 0);
+            var selected = Math.floor(Math.random() * total_prob)
+            var total_processed = 0;
+
+            var sel_item = 0
+            list.some(function (x, index, array) {
+                total_processed += x['Probability'];
+                if (selected <= total_processed) {
+                    sel_item = index;
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+			var i = list[sel_item];
+			foo = i['Description']
 			return foo;
 		}
 		
