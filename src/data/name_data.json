@@ -1,222 +1,172 @@
 {
-	"Given": {
-		"Prefix": [
-			"Tor",
-			"Bar",
-			"El",
-			"Lud",
-			"Es",
-			"Phi",
-			"Clem",
-			"Cle",
-			"Fal",
-			"Clar",
-			"Nin",
-			"Col",
-			"Cal",
-			"Viv",
-			"Car",
-			"Fred",
-			"Vik",
-			"Dar",
-			"Bail",
-			"Eld",
-			"Alb",
-			"Ald",
-			"Va",
-			"Gab",
-			"Dag",
-			"Sieg",
-			"Han",
-			"Lud",
-			"Lor",
-			"Loren",
-			"Davan",
-			"Vulf",
-			"Elyz",
-			"Wyl",
-			"Ani",
-			"Pelg",
-			"Fran",
-			"Thyl",
-			"Mel",
-			"Gil",
-			"Alt",
-			"Mau",
-			"Ja",
-			"Jo",
-			"Ed",
-			"An",
-			"Adel",
-			"Adol",
-			"Cyb",
-			"Syr"
-		],
-		"Constructors": [
-			"is",
-			"ed",
-			"go",
-			"a",
-			"ar",
-			"ik",
-			"t",
-			"ra",
-			"rag",
-			"s",
-			""
-		],
-		"Suffix": [
-			"us",
-			"ne",
-			"de",
-			"bett",
-			"ang",
-			"drel",
-			"dred",
-			"gad",
-			"had",
-			"an",
-			"rielle",
-			"fried",
-			"na",
-			"ara",
-			"dar",
-			"dara",
-			"mund",
-			"mond",
-			"gab",
-			"ton",
-			"tor",
-			"on",
-			"la",
-			"ek",
-			"f",
-			"ond",
-			"e",
-			"ka",
-			"a",
-			"o",
-			"is",
-			"vik",
-			"rick",
-			"jor",
-			"jord",
-			"ter",
-			"er",
-			"d",
-			"ey",
-			"eb",
-			"dorf",
-			"ion",
-			"ger",
-			"brecht",
-			"ec",
-			"ence",
-			"y",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"Surname": {
-		"Main": [
-			"Wind",
-			"Boe",
-			"Dav",
-			"Bon",
-			"Garr",
-			"Kai",
-			"Smy",
-			"Ron",
-			"Mor",
-			"Ken",
-			"Shi",
-			"Gran",
-			"Ald",
-			"Alt",
-			"Ash",
-			"Win"
-		],
-		"Suffix": [
-			"son",
-			"sor",
-			"dotte",
-			"down",
-			"ffe",
-			"ton",
-			"wick",
-			"on",
-			"et",
-			"edy",
-			"er",
-			"vlach",
-			"ids",
-			"in",
-			"frey",
-			"dot",
-			"is",
-			"ser",
-			"berg",
-			"sonberg",
-			"net",
-			"s",
-			"ne",
-			"dy",
-			"de",
-			"mer",
-			""
-		],
-		"Single": [
-			"Ashdown",
-			"Baker",
-			"Bennett",
-			"Bigge",
-			"Brickenden",
-			"Brooker",
-			"Browne",
-			"Fayr",
-			"Cooke",
-			"Carpenter",
-			"Cheeseman",
-			"Clarke",
-			"Cooper",
-			"Fletcher",
-			"Godfrey",
-			"Gregory",
-			"Hughes",
-			"Mannering",
-			"Nashe",
-			"Paane",
-			"Rolfe",
-			"Tailor",
-			"Walter",
-			"Ward",
-			"Moore",
-			"Webb",
-			"Wood",
-			"Magnis",
-			"Smith",
-			"Cobber",
-			"Berke",
-			"Taven",
-			"Faram",
-			"Abbot",
-			"Frere",
-			"Hill",
-			"Tre",
-			"Tawny",
-			"Stone",
-			"Sande",
-			"Pike",
-			"Barnes",
-			"Grange",
-			"Hayward",
-			"Shepherd",
-			"Vikker",
-			"Winnet"
-		]
-	}
+    "Tags": [
+        {"Description":"Male", "Selected": true}, 
+        {"Description":"Female", "Selected": false}, 
+        {"Description":"Human", "Selected": true}, 
+        {"Description":"Elf", "Selected": false}, 
+        {"Description":"Dwarf", "Selected": false}, 
+        {"Description":"Dragonborn", "Selected": false}
+    ],
+    "Names": [
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Human"],
+            "Full": "Thomas",
+            "Diminutive": "Tom"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Human"],
+            "Full": "William",
+            "Diminutive": "Bill"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Female", "Human"],
+            "Full": "Loren",
+            "Diminutive": "Lor"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Female", "Human"],
+            "Full": "Meredith",
+            "Diminutive": "Mary"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Female", "Human"],
+            "Full": "Linden",
+            "Diminutive": "Lin"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Human"],
+            "Full": "Jennifer",
+            "Diminutive": "Jenny"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Human"],
+            "Full": "Agatha",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Dwarf"],
+            "Full": "Dagnal",
+            "Diminutive": "Dagna"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Dwarf"],
+            "Full": "Tordek",
+            "Diminutive": "Tor"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Dwarf"],
+            "Full": "Amber",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Dwarf"],
+            "Full": "Baern",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Dwarf"],
+            "Full": "Kathra",
+            "Diminutive": "Kath"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Dwarf"],
+            "Full": "Darrak",
+            "Diminutive": "Dar"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Dwarf"],
+            "Full": "Torbera",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Dwarf"],
+            "Full": "Rurik",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Elf"],
+            "Full": "Althaea",
+            "Diminutive": "Altha"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Elf"],
+            "Full": "Varis",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Elf"],
+            "Full": "Ielenia",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Elf"],
+            "Full": "Immeral",
+            "Diminutive": ""
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Elf"],
+            "Full": "Vadania",
+            "Diminutive": "Vana"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Elf"],
+            "Full": "Aramil",
+            "Diminutive": "Rami"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Female", "Elf"],
+            "Full": "Mialee",
+            "Diminutive": "Mia"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Elf"],
+            "Full": "Quarion",
+            "Diminutive": "Quar"
+        }
+    ],
+    "Nicknames": [
+        {
+            "Probability": 1,
+            "Tags": [],
+            "Full": "The Red"
+        },
+        {
+            "Probability": 1,
+            "Tags": [],
+            "Full": "The Dead"
+        },
+        {
+            "Probability": 1,
+            "Tags": [],
+            "Full": "The Redeemed"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Male", "Human"],
+            "Full": "The Man"
+        }
+    ]
 }

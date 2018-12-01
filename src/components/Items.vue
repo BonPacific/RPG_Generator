@@ -166,7 +166,7 @@ export default {
             var selected = Math.floor(Math.random() * total_prob)
             var total_processed = 0;
 
-            var sel_item = 0
+            var sel_item = 0;
             list.some(function (x, index, array) {
                 total_processed += x['Probability'];
                 if (selected <= total_processed) {
