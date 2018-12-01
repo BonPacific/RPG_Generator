@@ -8,16 +8,32 @@
 						<label class="d-inline-block">Number of names</label>
 						<input type="number" class="form-control d-inline-block" v-model="num_to_generate">
 					</div>
-					
 				</div> 
-				<div class="col-sm-4 col-xs-12">
-					<button class="btn btn-outline-dark" v-bind:disabled="loading" v-on:click="function () {loading = true; generate_names();}">Generate Names</button>
-                    <div v-if="loading" class="float-right"><i class="fas fa-spinner fa-pulse"></i></div>
-                </div>
 			</div>
-			<div class="row"> 
+			<div class="row">
+                <div class="col-sm-12"> 
+                    <label>Structure</label>
+				</div>
+                <div class="col-md-4 col-sm-6"> 
+					<div>
+						
+						<select class="form-control d-inline-block" v-model="first_selected">
+                            <option v-for="x in first" v-bind:key="x" v-bind:value="x">{{x}}</option>
+                        </select>
+					</div>
+				</div> 
+				<div class="col-md-4 col-sm-6"> 
+					<div>
+						
+						<select class="form-control d-inline-block" v-model="second_selected">
+                            <option v-for="x in second" v-bind:key="x" v-bind:value="x">{{x}}</option>
+                        </select>
+					</div>
+				</div> 
+			</div>
+			<div class="row">
                 <div class="col-md-4">
-                    <label >Tags</label> 
+                    <label>Tags</label> 
                     <ul class="tags">
                         <li class="form-check" v-for="x in tags" :key="x.Description">
                             <input v-bind:id="x.Description" class="form-check-input" value="true" type="checkbox" v-model="x.Selected"/>
@@ -29,6 +45,12 @@
                     </ul>
                 </div> 
             </div> 
+            <div class="row">
+                <div class=" offset-xs-6 col-xs-6 col-md-3 offset-md-9">
+					<button class="btn btn-outline-dark w100" v-bind:disabled="loading" v-on:click="function () {loading = true; generate_names();}">Generate Names</button>
+                    <div v-if="loading" class="float-right"><i class="fas fa-spinner fa-pulse"></i></div>
+                </div>
+            </div>
 		</b-card>
 		
 		<div class="mx-auto" style="width:80%; margin-top:3rem;">
@@ -60,6 +82,10 @@ export default {
 			name_data: null,
             loading: false,
             tags: [],
+            first: ['GivenWhole', 'GivenConstructed', '-None-'],
+            first_selected: "GivenWhole",
+            second: ['SurnameWhole', 'SurnameConstructed', '-None-'],
+            second_selected: "SurnameWhole",
 			num_to_generate: 10,
 			generated_names: []
 		} 
@@ -79,8 +105,10 @@ export default {
 	methods: {
 		generate_names: function () {
             var self = this;
-            // self.loading = true;
+            self.loading = true;
             self.generated_names = [];
+
+            console.log(self.first_selected, self.second_selected);
 
             var f_tags = self.tags.filter(function (foo) {
 				return foo.Selected == true
@@ -94,33 +122,56 @@ export default {
 				var foo = self.generate(sel_tags);
 				self.generated_names.push(foo);
             }
-            // self.loading = false;
+            self.loading = false;
 		},
 		generate: function (include = [], avoid = []) {
 			var self = this;
-            var name = "";
+            var name1;
+            var name2;
+            var name_full = "";
+            var name1str = "";
+            var name2str = "";
+            
+            if (self.first_selected != "-None-") {
+                name1 = self.random_modifier(self.first_selected, include, avoid);
+                if (name1.hasOwnProperty('Diminutive') && (Math.random() < 0.1)) {
+                    name1str += name1.Diminutive;
+                } else {
+                    name1str += name1.Full;
+                }
+            }
+            
+            
+            if (self.second_selected != "-None-") {
+                name2 = self.random_modifier(self.second_selected, include, avoid);
+                if (name2.hasOwnProperty('Diminutive') && (Math.random() < 0.1)) {
+                    name2str += name2.Diminutive;
+                } else {
+                    name2str += name2.Full;
+                }
+            }
+
+            console.log("name2str", name2str);
+
+            name_full = name1str + ' ' + name2str;
+
+            var regex = /\{(\w*)\}/i;
+			var mod = name_full.match(regex);
 			
-            name = self.random_modifier('Names', include, avoid).Full;
-            // console.log(n);
-			// name = self.random_modifier('Names', include, avoid).Description;
+			if (mod) {
+				while (mod) {
+                    var bar = self.random_modifier(mod[1], include, avoid).Full;
+                    console.log(bar);
+					name_full = name_full.replace(mod[0], bar)
+					mod = name_full.match(regex);
+				}
+            }
 			
-			// var regex = /\{(\w*)\}/i;
-			// var mod = name.match(regex);
+            // name_full += name1str.charAt(0).toUpperCase() + name1str.slice(1);
+            // name_full += ' ';
+			// name_full += name2str.charAt(0).toUpperCase() + name2str.slice(1);
 			
-			// if (mod) {
-			// 	while (mod) {
-			// 		name = name.replace(mod[0], self.random_modifier(mod[1], wealth, include, avoid))
-			// 		mod = name.match(regex);
-			// 	}
-			// }
-			
-			// var re2 = /\%(\w*)\%/i;
-			// var mod2 = name.match(re2);
-			
-			name = name.trim();
-			name = name.charAt(0).toUpperCase() + name.slice(1);
-			
-			return name;
+			return name_full;
 		},
 		random_modifier: function (key, include = [], avoid = []) {
             // console.log(key, include, avoid);
@@ -149,6 +200,12 @@ export default {
                 // console.log(allowed);
 				return allowed;
             });
+
+            if (list.length == 0) {
+                alert("No entries found for selected tags");
+                self.loading = false;
+                return null;
+            }
 
             var total_prob = list.reduce(function (total, x) {return total + x['Probability']}, 0)+1;
             var selected = Math.floor(Math.random() * total_prob)
