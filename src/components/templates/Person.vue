@@ -1,6 +1,6 @@
 <template>
 	<div class="">
-		<h5 class="card-title"><span v-if="person.title">{{person.title}}</span> {{person.first_name}} {{person.last_name}}</h5>
+		<h5 class="card-title"><span v-if="person.title">{{person.title}}</span> {{person.name}}</h5>
 		<h6 class="card-subtitle mb-2 text-muted">{{person.species}}, {{person.age.Description}}, {{person.gender}} </h6>
 		<h6 class="card-subtitle mb-2 text-muted"><strong>Profession: </strong>{{person.profession}} </h6>
 		<!-- <h6 class="card-subtitle mb-2 text-muted">{{person.age.Description}}, {{person.gender}}</h6> -->

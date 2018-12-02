@@ -36,7 +36,7 @@
 		
 		<div class="mx-auto" style="width:90%; margin-top:3rem;">
 			<div class="row" style="" >
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4" style="padding-bottom:1rem;" v-for="x in generated_npcs" :key="x.first_name">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4" style="padding-bottom:1rem;" v-for="x in generated_npcs" :key="x.name">
 					<div class="card " >
 						<div class="card-body " >
 							<PersonTemplate :person="x"></PersonTemplate>
@@ -116,14 +116,14 @@ export default {
 		},
 		random_npc: function (wealth = null, age = null, gender = null) {
 			var self = this;
-console.log('begin npc');
+            console.log('begin npc');
 			var npc = {};
 			
 			npc.meta = [];
 			
 			//Name
-			npc.first_name = self.$refs.child_name.generate_name(true, false);
-			npc.last_name = self.$refs.child_name.generate_name(false, true);
+			npc.name = self.$refs.child_name.generate();
+			// npc.last_name = self.$refs.child_name.generate();
 			
 			//Age
 			if (age != null) {
