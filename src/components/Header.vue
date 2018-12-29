@@ -77,7 +77,7 @@ m448 -352 c106 -50 222 -259 223 -402 0 -55 -23 -128 -53 -167 -25 -33 -101
 			</div>
 		</div>
 		<div class="top-right">
-			<div class="btn btn-sm btn-dark-outline" v-on:click="view_screen = 'Inventory'">
+			<div class="btn btn-sm btn-dark-outline" v-on:click="view_screen = 'List'">
 				<i class="fas fa-receipt"></i> List
 			</div> 
 			<div class="btn btn-sm btn-dark-outine" v-on:click="dark_mode = !dark_mode">

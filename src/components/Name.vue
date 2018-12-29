@@ -99,41 +99,43 @@ export default {
 		var self = this;
 		this.$nextTick(function () {
 			//using nextTick to make sure the child components are fully mounted and ready.
-			self.generate_names();
+			// self.generate_names();
 		});
 	},
 	methods: {
 		generate_names: function () {
             var self = this;
-            self.loading = true;
-            self.generated_names = [];
+            this.$nextTick(function () {
+                self.loading = true;
+                self.generated_names = [];
 
-            console.log(self.first_selected, self.second_selected);
+                // console.log(self.first_selected, self.second_selected);
 
-            var f_tags = self.tags.filter(function (foo) {
-				return foo.Selected == true
-            })
-            var sel_tags = [];
-            f_tags.forEach(function (tag) {
-                sel_tags.push(tag.Description);
+                var f_tags = self.tags.filter(function (foo) {
+                    return foo.Selected == true
+                })
+                var sel_tags = [];
+                f_tags.forEach(function (tag) {
+                    sel_tags.push(tag.Description);
+                });
+                var n = 0
+                for(n; n < self.num_to_generate; n++) {
+                    var foo = self.generate(sel_tags);
+                    self.generated_names.push(foo);
+                }
+                self.loading = false;
             });
-            var n = 0
-			for(n; n < self.num_to_generate; n++) {
-				var foo = self.generate(sel_tags);
-				self.generated_names.push(foo);
-            }
-            self.loading = false;
 		},
-		generate: function (include = [], avoid = []) {
+		generate: function (include = [], avoid = [], first_selected = 'GivenConstructed', second_selected = 'SurnameConstructed') {
 			var self = this;
             var name1;
             var name2;
             var name_full = "";
             var name1str = "";
             var name2str = "";
-            
+
             if (self.first_selected != "-None-") {
-                name1 = self.random_modifier(self.first_selected, include, avoid);
+                name1 = self.random_modifier(first_selected, include, avoid);
                 if (name1.hasOwnProperty('Diminutive') && (Math.random() < 0.1)) {
                     name1str += name1.Diminutive;
                 } else {
@@ -141,9 +143,8 @@ export default {
                 }
             }
             
-            
             if (self.second_selected != "-None-") {
-                name2 = self.random_modifier(self.second_selected, include, avoid);
+                name2 = self.random_modifier(second_selected, include, avoid);
                 if (name2.hasOwnProperty('Diminutive') && (Math.random() < 0.1)) {
                     name2str += name2.Diminutive;
                 } else {
@@ -151,9 +152,7 @@ export default {
                 }
             }
 
-            console.log("name2str", name2str);
-
-            name_full = name1str + ' ' + name2str;
+name_full = name1str + ' ' + name2str;
 
             var regex = /\{(\w*)\}/i;
 			var mod = name_full.match(regex);
@@ -166,10 +165,6 @@ export default {
 					mod = name_full.match(regex);
 				}
             }
-			
-            // name_full += name1str.charAt(0).toUpperCase() + name1str.slice(1);
-            // name_full += ' ';
-			// name_full += name2str.charAt(0).toUpperCase() + name2str.slice(1);
 			
 			return name_full;
 		},
@@ -202,6 +197,7 @@ export default {
             });
 
             if (list.length == 0) {
+                console.log(include);
                 alert("No entries found for selected tags");
                 self.loading = false;
                 return null;

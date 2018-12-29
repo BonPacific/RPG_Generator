@@ -128,15 +128,15 @@ export default {
 			if (mod2) {
 				switch (mod2[1]) {
 					case "Name":
-						var name = self.$refs.child_name.generate_name();
+						var name = self.$refs.child_name.generate();
 						item = item.replace(mod2[0], name)
 						break;
 					case "FirstName":
-						var name = self.$refs.child_name.generate_name(true, false);
+						var name = self.$refs.child_name.generate([], [], 'GivenWhole', '-None-');
 						item = item.replace(mod2[0], name)
 						break;
 					case "LastName":
-						var name = self.$refs.child_name.generate_name(false, true);
+						var name = self.$refs.child_name.generate([], [], '-None-', 'SurnameWhole');
 						item = item.replace(mod2[0], name)
 						break;
 					default:

@@ -25,6 +25,10 @@
 		<Location>
 		</Location>
 	</div>
+	<div v-if="view_screen == 'List'">
+		<List :list_data="list_data">
+		</List>
+	</div>
 	
   </div>
 </template>
@@ -35,6 +39,7 @@ import District from "./District.vue"
 import Name from "./Name.vue"
 import Items from "./Items.vue"
 import Books from "./Books.vue"
+import List from "./List.vue"
 import NPC from "./NPC.vue"
 import Location from "./Location.vue"
 
@@ -44,7 +49,10 @@ export default {
     return {
 		district_data: null,
 		name_data: null,
-		district_config: {},
+        district_config: {},
+        list_data: {
+            'person': []
+        },
 		view_screen: 'District'
     } 
   },
@@ -53,12 +61,17 @@ export default {
 		Books,
 		Name,
 		NPC,
+		List,
 		Items,
 		Location
   },
   created: function () {
 		var self = this;
-		window.eventBus.$on('view_screen_change', function(data) { self.view_screen = data; });
+        window.eventBus.$on('view_screen_change', function(data) { self.view_screen = data; });
+        window.eventBus.$on('add_to_list', function(type, data) { 
+            console.log('on: add_to_list', type, data);
+			self.list_data[type].push(data);
+		});
   },
   methods: {
 		random: function (type) {
