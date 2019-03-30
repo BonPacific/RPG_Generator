@@ -154,6 +154,13 @@ export default {
 				loc.type = Object.assign({}, self.random_modifier("LocationType", selected_tags));
 			}
 
+            // Owner
+            if (loc.type.Owner) {
+                loc.Owner = self.$refs.child_npc.random_npc();
+            } else {
+                loc.Owner = null;
+            }
+
 			var regex = /\{(\w*)\}/i;
 			var mod_tags = [loc.wealth.Description];
 			var name = loc.type.Name
@@ -168,14 +175,6 @@ export default {
 			}
 
 			loc.type.Name = name;
-
-			//Owner
-			// if (loc.type.Owner) {
-			// 	loc.Owner = self.$refs.child_npc.random_npc();
-			// } else {
-			// 	loc.Owner = null;
-			// }
-			
 			
 			return loc;
 		},

@@ -74,24 +74,24 @@ export default {
 		});
   },
   methods: {
-		random: function (type) {
-			console.log(type, typeof type);
-			var self = this;
-			var arr = Object.keys(self.district_data[type]);
-			var ret = arr[Math.floor(Math.random() * arr.length)]
-			console.log(ret);
-			return ret;
-		},
-		sumObjectsByKey: function(objs) {
-			console.log('objs', objs);
-			return objs.reduce((a, b) => { 
-			for (let k in b) { 
-				if (b.hasOwnProperty(k)) 
-				a[k] = (a[k] || 0) + b[k]; 
-			} 
-			return a; 
-			}, {}); 
-		}
+		// random: function (type) {
+		// 	console.log(type, typeof type);
+		// 	var self = this;
+		// 	var arr = Object.keys(self.district_data[type]);
+		// 	var ret = arr[Math.floor(Math.random() * arr.length)]
+		// 	console.log(ret);
+		// 	return ret;
+		// },
+		// sumObjectsByKey: function(objs) {
+		// 	console.log('objs', objs);
+		// 	return objs.reduce((a, b) => { 
+		// 	for (let k in b) { 
+		// 		if (b.hasOwnProperty(k)) 
+		// 		a[k] = (a[k] || 0) + b[k]; 
+		// 	} 
+		// 	return a; 
+		// 	}, {}); 
+		// }
   },
   computed: {
 		totals: function () {

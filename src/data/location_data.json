@@ -29,7 +29,7 @@
 		{"Tags": ["Rich", "Average", "Poor"				], 
 			"Description": "Smoking Den", 		
 			"Owner": true,	
-			"Name": "Smoking Den", 	 		
+			"Name": "{Generic}", 	 		
 			"Title": ""},
 		{"Tags": ["Rich", "Average", "Public"						], 
 			"Description": "Fountain", 		    
@@ -304,7 +304,7 @@
 		{"Tags": ["Rich", "Service", "Arcane"					], 
 			"Description": "Golem Hire", 		    
 			"Owner": true,	
-			"Name": "Golem Hire", 		        
+			"Name": "%Owner%'s Golem Hire", 		        
 			"Title": "Magister"},
 		{"Tags": ["Rich", "Average", "Poor", "Craft"					], 
 			"Description": "Brewery", 		    
@@ -349,7 +349,7 @@
 		{"Tags": ["Rich", "Average", "Poor", "Shop"					], 
 			"Description": "Tobaccanist", 	    
 			"Owner": true,	
-			"Name": "Tobaccanist", 	        
+			"Name": "{Tobaccanist}", 	        
 			"Title": ""},
 		{"Tags": ["Rich", "Average", "Poor", "Shop", "Craft"		], 
 			"Description": "Cobbler", 		    
@@ -387,6 +387,10 @@
 		{"Tags": ["Rich"], 
 			"Description": "Cardinal"}
 	],
+	"Generic" : [
+		{"Tags": ["Average", "Poor", "Rich"], 
+			"Description": "%FirstName%'s"}
+	],
 	"ThievesWayhouse" : [
 		{"Tags": ["Average", "Poor"], 
 			"Description": "Red Sign House"},
@@ -410,6 +414,16 @@
 			"Description": "{BHouse} of {BName}"},
 		{"Tags": ["Rich", "Average", "Poor"], 
 			"Description": "%Owner%'s {BHouse}"}
+	],
+	"Tobaccanist" : [
+		{"Tags": ["Rich", "Average", "Poor", "Religious"], 
+			"Description": "The Pipeman"},
+		{"Tags": ["Rich"], 
+			"Description": "Uptown's"},
+		{"Tags": ["Rich", "Average", "Religious"], 
+			"Description": "Pastor's Leaf"},
+		{"Tags": ["Average", "Religious"], 
+			"Description": "Locke's Pipe Shoppe"}
 	],
 	"ReligiousLeader" : [
 		{"Tags": ["Rich", "Average", "Poor", "Religious"], 

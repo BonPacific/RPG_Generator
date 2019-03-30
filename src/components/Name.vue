@@ -32,17 +32,18 @@
 				</div> 
 			</div>
 			<div class="row">
-                <div class="col-md-4">
+                <div class="col-md-8 col-sm-12">
                     <label>Tags</label> 
                     <ul class="tags">
-                        <li class="form-check" v-for="x in tags" :key="x.Description">
+                        <li class="form-check d-inline-block" v-for="x in tags" :key="x.Description">
                             <input v-bind:id="x.Description" class="form-check-input" value="true" type="checkbox" v-model="x.Selected"/>
                             <label v-bind:for="x.Description" class="form-check-label text-muted">{{x.Description}}</label>
                             
                         </li>
-                        <button class="btn btn-sm btn-light" v-on:click="set_all(tags, false)">Unselect All</button>
-                        <button class="btn btn-sm btn-light" v-on:click="set_all(tags, true)">Select All</button>
                     </ul>
+                    <button class="btn btn-sm btn-light" v-on:click="set_all(tags, false)">Unselect All</button>
+                    <button class="btn btn-sm btn-light" v-on:click="set_all(tags, true)">Select All</button>
+                    
                 </div> 
             </div> 
             <div class="row">
@@ -126,13 +127,15 @@ export default {
                 self.loading = false;
             });
 		},
-		generate: function (include = [], avoid = [], first_selected = 'GivenConstructed', second_selected = 'SurnameConstructed') {
+		generate: function (include = [], avoid = [], first_selected = '', second_selected = '') {
 			var self = this;
             var name1;
             var name2;
             var name_full = "";
             var name1str = "";
             var name2str = "";
+            if (first_selected == '') {first_selected = self.first_selected}
+            if (second_selected == '') {second_selected = self.second_selected}
 
             if (self.first_selected != "-None-") {
                 name1 = self.random_modifier(first_selected, include, avoid);
@@ -152,7 +155,7 @@ export default {
                 }
             }
 
-name_full = name1str + ' ' + name2str;
+            name_full = name1str + ' ' + name2str;
 
             var regex = /\{(\w*)\}/i;
 			var mod = name_full.match(regex);
@@ -182,8 +185,13 @@ name_full = name1str + ' ' + name2str;
                 var i = 0;
                 var l = 0;
 				while ((i < include.length) && (allowed == true)) {
-                    // console.log('allowed: '+allowed, 'name[tags].includes('+include[i]+'): '+ name["Tags"].includes(include[i]));
-                    allowed = allowed && name["Tags"].includes(include[i]);
+                    // console.log(name);
+                    if (name["Tags"].length == 0) {
+                        allowed = allowed;
+                    } else {
+                        allowed = allowed && name["Tags"].includes(include[i]);
+                    }
+                    // console.log('allowed: '+ allowed, name['Full'], ['Tags'],'.includes('+include[i]+'): '+ name["Tags"].includes(include[i]));
                     
 					i++;
 				}
@@ -197,7 +205,7 @@ name_full = name1str + ' ' + name2str;
             });
 
             if (list.length == 0) {
-                console.log(include);
+                console.log(include, avoid);
                 alert("No entries found for selected tags");
                 self.loading = false;
                 return null;

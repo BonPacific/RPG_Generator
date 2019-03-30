@@ -30,9 +30,9 @@ import PersonTemplate from "./Person.vue";
 
 export default {
     name: 'location-template', 
-    components: [
+    components: {
         PersonTemplate
-    ],
+    },
 	props: [
 		'location'
 	],

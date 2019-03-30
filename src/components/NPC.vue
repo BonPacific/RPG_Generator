@@ -172,12 +172,12 @@ export default {
                 self.loading = false;
             });
 		},
-		random_npc: function (params = {wealth: null, age: null, gender: null}) {
+		random_npc: function (params = {wealth: null, age: null, gender: null, profession: null}) {
 			var self = this;
             console.log('begin npc');
             var npc = {};
+            
             npc.appearance = [];
-			
             npc.meta = [];
             
             //Gender
@@ -189,7 +189,7 @@ export default {
 			
 			//Age
 			if (params.hasOwnProperty('age') && params.age != null) {
-				npc.age = self.random_modifier_p({"key": "LifeStages", "include": age});
+				npc.age = self.random_modifier_p({"key": "LifeStages", "include": params.age});
 			} else {
 				npc.age = self.selected_ages[Math.floor(Math.random() * self.selected_ages.length)]
 			}
@@ -202,12 +202,18 @@ export default {
 			}
 
 			
-			//Occupation
-			var filtered_professions = self.npc_data["Professions"].filter(function (x1) {
-				return (x1["Tags"].includes(npc.wealth.Description) && x1["Tags"].includes(npc.age['Description']));
-			});
-			npc.profession = filtered_professions[Math.floor(Math.random() * filtered_professions.length)]['Description']
-			
+            //profession
+            if (params.hasOwnProperty('profession') && params.profession != null) {
+                npc.profession = params.profession;
+            } else {
+                console.log(npc.wealth.Description, npc.age['Description']);
+                var filtered_professions = self.npc_data["Professions"].filter(function (x1) {
+                    return (x1["Tags"].includes(npc.wealth.Description) && x1["Tags"].includes(npc.age['Description']));
+                });
+                console.log(filtered_professions);
+                npc.profession = filtered_professions[Math.floor(Math.random() * filtered_professions.length)]['Description']
+            }
+            
 			//Species
 			var species_raw = self.random_modifier_p({"local": self.available_species});
 			npc.species = species_raw['Description'];
@@ -334,10 +340,13 @@ export default {
 			if (mod_a) {
 				while (mod_a) {
 					
-					var list = self.npc_data[mod_a[1]].filter(function (x) {
-						return x["Tags"].includes(npc.gender) && x["Tags"].includes(npc.age.Description) && x["Tags"].includes(npc.wealth.Description);
-					});
-					var app_sel = list[Math.floor(Math.random() * list.length)];
+					// var list = self.npc_data[mod_a[1]].filter(function (x) {
+					// 	return x["Tags"].includes(npc.gender);
+					// 	// return x["Tags"].includes(npc.gender) && x["Tags"].includes(npc.age.Description) && x["Tags"].includes(npc.wealth.Description);
+                    // });
+                    // console.log(npc.gender, list, mod_a);
+					var app_sel = self.random_modifier_p({"key": mod_a[1], "include": [npc.gender]});
+					// var app_sel = list[Math.floor(Math.random() * list.length)];
 					app = app.replace(mod_a[0], app_sel['Description']);
 					mod_a = app.match(regex);
 				}
@@ -364,21 +373,30 @@ export default {
             }
             
             
-			// Items
+            // Items
+            console.log("items");
 			var coins = '';
 			var items_npc = [];
 			var item_require = []
 			var num_items = 1 + Math.floor(Math.random() * 2) + npc.age['ItemModifier'] + npc.wealth['ItemModifier'];
-			
-			for (var i = 0; i < num_items; i++) {
-				items_npc.push(self.$refs.child_item.generate_item(npc.wealth.Description, item_require, npc.age['ItemAvoid']));
-			}
+            
+            console.log(num_items);
+            if (i > 0) {
+                for (var i = 0; i <= num_items; i++) {
+                    items_npc.push(self.$refs.child_item.generate_item(npc.wealth.Description, item_require, npc.age['ItemAvoid']));
+                }
+            }
 			
 			var coin_mod = npc.age['CoinModifier'] * npc.wealth['CoinModifier'];
 			
-			coins = coins.concat(Math.ceil(coin_mod * (-1 + Math.floor(Math.random() * 3 + Math.random() * 3)))).concat('gp, ')
-			coins = coins.concat(Math.ceil(npc.age['CoinModifier'] * (3 + Math.floor(Math.random() * 8 + Math.random() * 12)))).concat('sp, ')
-			coins = coins.concat(Math.ceil(npc.age['CoinModifier'] * (6 + Math.floor(Math.random() * 6)))).concat('cp')
+			coins = coins.concat(Math.ceil(
+                Math.max(
+                    coin_mod * (0 + Math.floor(Math.random() * 3 + Math.random() * 3)), 
+                    0
+                )
+            )).concat('gp, ');
+			coins = coins.concat(Math.ceil(npc.age['CoinModifier'] * (3 + Math.floor(Math.random() * 8 + Math.random() * 12)))).concat('sp, ');
+			coins = coins.concat(Math.ceil(npc.age['CoinModifier'] * (6 + Math.floor(Math.random() * 6)))).concat('cp');
 			
 			items_npc.push(coins);
 			
@@ -423,6 +441,9 @@ export default {
             var foo = "";
             var list = []
 
+            console.log('key', key);
+            console.log('include', include);
+
             if (key != "") {
                 if (!(key in self.npc_data)) {
                     alert('Attempted to access undefined key "'+ key +'" in data');
@@ -431,14 +452,16 @@ export default {
                     var allowed = true;
                     var i = 0;
                     var l = 0;
-                    while ((i < include.length) && (allowed == true)) {
-                        allowed = allowed && x0["Tags"].includes(include[i]);
-                        i++;
-                    }
-                    
-                    while ((l <= avoid.length) && (allowed == true)) {
-                        allowed = allowed && !x0["Tags"].includes(avoid[l]);
-                        l++;
+                    if (x0.hasOwnProperty("Tags") && x0["Tags"].length > 0) {
+                        while ((i < include.length) && (allowed == true)) {
+                            allowed = allowed && x0["Tags"].includes(include[i]);
+                            i++;
+                        }
+                        
+                        while ((l <= avoid.length) && (allowed == true)) {
+                            allowed = allowed && !x0["Tags"].includes(avoid[l]);
+                            l++;
+                        }
                     }
                     return allowed;
                 });
@@ -447,7 +470,7 @@ export default {
                     return x.Selected;
                 });
             } else {
-                alert("Must declare one of 'key' or 'local' in random_modifier_p()");
+                alert("Must declare one of 'key' or 'local' in random_modifier()");
             }
 
             if (list.length == 0) {

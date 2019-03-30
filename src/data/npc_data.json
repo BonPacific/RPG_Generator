@@ -47,19 +47,28 @@
             "Probability": 1, 
             "Tags": ["Rich"], 
             "CoinModifier": 6, 
-            "ItemModifier": 2},
+            "ItemModifier": 2
+        },
 		{   
             "Description":"Average",
             "Probability": 1, 
             "Tags": ["Average"], 
             "CoinModifier": 2, 
-            "ItemModifier": 1},
+            "ItemModifier": 1
+        },
 		{   
             "Description":"Poor",
             "Probability": 1, 
             "Tags": ["Poor"], 
             "CoinModifier": 0.5, 
             "ItemModifier": 0
+        },
+		{   
+            "Description":"Destitute",
+            "Probability": 1, 
+            "Tags": ["Destitute"], 
+            "CoinModifier": 0.01, 
+            "ItemModifier": -2
         }
 	],
 	"Gender" : [
@@ -126,45 +135,45 @@
 		{
             "Probability": 1,
             "Tags": ["Adult", "Middle Age", "Average", "Poor"], 
-             "Description": "Soldier"
+            "Description": "Soldier"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Farmer"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
             "Description": "Scholar/Sage"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Adolescent", "Poor", "Average"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Adolescent", "Poor", "Average"], 
             "Description": "Apprentice"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
             "Description": "Adventurer"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Baker"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Cook"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Poor", "Average"], 
             "Description": "Brewer"
         },
         {
-        "Probability": 1,
+        "Probability": 4,
         "Tags": ["Adult", "Middle Age", "Poor"], 
             "Description": "Porter"
         },
@@ -184,7 +193,7 @@
             "Description": "Artist"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Smith"
         },
@@ -199,12 +208,12 @@
             "Description": "Carver"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Potter"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Leatherworker"
         },
@@ -219,12 +228,12 @@
             "Description": "Chandler"
         },
         {
-        "Probability": 1,
+        "Probability": 3,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Butcher"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Miller"
         },
@@ -244,7 +253,7 @@
             "Description": "Builder"
         },
         {
-        "Probability": 1,
+        "Probability": 0.5,
         "Tags": ["Adult", "Middle Age", "Old", "Rich", "Average"], 
             "Description": "Foreman"
         },
@@ -269,17 +278,17 @@
             "Description": "Mason"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
             "Description": "Architect"
         },
         {
-        "Probability": 1,
+        "Probability": 1.2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
             "Description": "Moneylender"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Spinner"
         },
@@ -289,12 +298,12 @@
             "Description": "Tailor"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Ropemaker"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Vintner"
         },
@@ -304,22 +313,22 @@
             "Description": "Painter"
         },
         {
-        "Probability": 1,
+        "Probability": 2.5,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Handyman"
         },
         {
-        "Probability": 1,
+        "Probability": 4,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Laborer"
         },
         {
-        "Probability": 1,
+        "Probability": 1.5,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Weaver"
         },
         {
-        "Probability": 1,
+        "Probability": 1.8,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Bodger"
         },
@@ -329,12 +338,12 @@
             "Description": "Cartwright"
         },
         {
-        "Probability": 1,
+        "Probability": 0.3,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Rich"], 
             "Description": "Confectioner"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Carpenter"
         },
@@ -349,12 +358,12 @@
             "Description": "Clothier"
         },
         {
-        "Probability": 1,
+        "Probability": 1.2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Cooper"
         },
         {
-        "Probability": 1,
+        "Probability": 1.2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Dyer"
         },
@@ -364,7 +373,7 @@
             "Description": "Embroiderer"
         },
         {
-        "Probability": 1,
+        "Probability": 0.7,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Engraver"
         },
@@ -374,12 +383,12 @@
             "Description": "Joiner"
         },
         {
-        "Probability": 1,
+        "Probability": 1.8,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Tinker"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Gravedigger"
         },
@@ -404,27 +413,37 @@
             "Description": "Plumber"
         },
         {
-        "Probability": 1,
+        "Probability": 1.8,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Plasterer"
         },
         {
-        "Probability": 1,
+        "Probability": 1.2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Roofer"
         },
         {
-        "Probability": 1,
+        "Probability": 1.4,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Herbalist"
         },
         {
-        "Probability": 1,
+        "Probability": 0.8,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Physician"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Religious"], 
+            "Description": "Faith Healer"
+        },
+        {
+        "Probability": 0.4,
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Arcane"], 
+            "Description": "Arcane Healer"
+        },
+        {
+        "Probability": 0.8,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Printmaker"
         },
@@ -435,22 +454,22 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Crime"], 
             "Description": "Fence"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Hunter"
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Poor", "Crime"], 
             "Description": "Poacher"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor"], 
+        "Probability": 1.6,
+        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor", "Crime"], 
             "Description": "Pickpocket"
         },
         {
@@ -460,7 +479,7 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Crime"], 
             "Description": "Prostitute"
         },
         {
@@ -469,7 +488,7 @@
             "Description": "Musician"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
             "Description": "Actor"
         },
@@ -479,7 +498,7 @@
             "Description": "Bailiff"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Guard"
         },
@@ -490,11 +509,11 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich", "Arcane"], 
             "Description": "Apothecary"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Innkeeper"
         },
@@ -504,12 +523,12 @@
             "Description": "Barkeep"
         },
         {
-        "Probability": 1,
+        "Probability": 1.2,
         "Tags": ["Adult", "Middle Age", "Adolescent", "Poor"], 
             "Description": "Milkmaid"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Scullerymaid"
         },
@@ -519,14 +538,24 @@
             "Description": "Maid"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Probability": 0.6,
+        "Tags": ["Adult", "Middle Age", "Old", "Average"], 
             "Description": "Tutor"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
-            "Description": "Captain"
+            "Probability": 0.8,
+            "Tags": ["Adult", "Middle Age", "Old", "Average"], 
+            "Description": "Guard Captain"
+        },
+        {
+            "Probability": 0.6,
+            "Tags": ["Adult", "Middle Age", "Old", "Average", "Rich", "Coastal"], 
+            "Description": "Ship Captain"
+        },
+        {
+            "Probability": 1,
+            "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Average", "Poor", "Coastal"], 
+            "Description": "Sailor"
         },
         {
         "Probability": 1,
@@ -539,12 +568,12 @@
             "Description": "Mercer"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Probability": 0.3,
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Artist"], 
             "Description": "Poet"
         },
         {
-        "Probability": 1,
+        "Probability": 1.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Barber-Chirurgeon"
         },
@@ -564,17 +593,17 @@
             "Description": "Cartier"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Dog Trainer"
         },
         {
-        "Probability": 1,
+        "Probability": 0.8,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
             "Description": "Horse Trainer"
         },
         {
-        "Probability": 1,
+        "Probability": 2,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Messenger"
         },
@@ -584,12 +613,12 @@
             "Description": "Quartermaster"
         },
         {
-        "Probability": 1,
+        "Probability": 1.8,
         "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Average", "Poor"], 
             "Description": "Stablehand"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Middle Age", "Old", "Average", "Poor"], 
             "Description": "Surgeon"
         },
@@ -604,33 +633,33 @@
             "Description": "Veteran"
         },
         {
-        "Probability": 1,
+        "Probability": 0.8,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Herald"
         },
         {
-        "Probability": 1,
+        "Probability": 1.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Cobbler"
         },
         {
-        "Probability": 1,
+        "Probability": 0.6,
         "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
             "Description": "Locksmith"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+        "Probability": 1.2,
+        "Tags": ["Adult", "Middle Age", "Old", "Poor", "Dirty"], 
             "Description": "Tanner"
         },
         {
-        "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
+        "Probability": 1.2,
+        "Tags": ["Adult", "Middle Age", "Old", "Poor", "Dirty"], 
             "Description": "Bleacher"
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Farm"], 
             "Description": "Beekeeper"
         },
         {
@@ -660,12 +689,12 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Rich", "Craft"], 
             "Description": "Distiller"
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Average", "Poor", "Dirty"], 
             "Description": "Smelter"
         },
         {
@@ -679,7 +708,7 @@
             "Description": "Dairymaid"
         },
         {
-        "Probability": 1,
+        "Probability": 1.6,
         "Tags": ["Adult", "Middle Age", "Old", "Poor"], 
             "Description": "Teamster"
         },
@@ -710,7 +739,7 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Poor", "Destitute"], 
             "Description": "Pilgrim"
         },
         {
@@ -720,12 +749,12 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child", "Poor"], 
+        "Tags": ["Adult", "Middle Age", "Old", "Adolescent", "Young Child", "Poor", "Destitute"], 
             "Description": "Beggar"
         },
         {
         "Probability": 1,
-        "Tags": ["Adolescent", "Young Child", "Poor"], 
+        "Tags": ["Adolescent", "Young Child", "Poor", "Destitute"], 
             "Description": "Urchin"
         },
         {
@@ -735,7 +764,7 @@
         },
         {
         "Probability": 1,
-        "Tags": ["Young Child", "Adolescent", "Rich", "Average", "Poor"], 
+        "Tags": ["Young Child", "Adolescent", "Rich", "Average", "Poor", "Destitute"], 
             "Description": "No Occupation"
         }
 	],
@@ -995,7 +1024,7 @@
 		 "Description": "They were knocked out, waking up hours later in the carnage."
 		},
 		{"Tags": [], 
-		 "Description": "They were badly injured, bearing a scar. [BattleScar]."
+		 "Description": "They were badly injured, bearing a scar. {BattleScar}."
 		}
 	],
 	"BattleScar" : [
@@ -1024,7 +1053,7 @@
 	"ReligiousEvent" : [
 		{"Tags": [], 
          "Probablity": 2,
-		 "Description": "Had a religious experience and [ReligionOpinion] {God}"
+		 "Description": "Had a religious experience and {ReligionOpinion} {God}"
 		},
 		{"Tags": [], 
             "Probablity": 4,
@@ -1057,7 +1086,7 @@
 		 "Description": "They escaped certain death, and believe it was the direct intervention of their god."
 		},
 		{"Tags": [], 
-		 "Description": "Saw a dark omen, which has left them [OmenFeeling]. [Omen]"
+		 "Description": "Saw a dark omen, which has left them {OmenFeeling}. {Omen}"
 		},
 		{"Tags": [], 
 		 "Description": "Witnessed a ghost."
@@ -1075,6 +1104,20 @@
 		},
 		{"Tags": [], 
 		 "Description": "An empty figure, through which they saw more stars than are held in the sky."
+		}
+	],
+	"OmenFeeling" : [
+        {"Tags": [], 
+         "Probability": 4,
+		 "Description": "jumpy"
+		},
+        {"Tags": [], 
+         "Probability": 1,
+		 "Description": "with an earie confidence"
+		},
+        {"Tags": [], 
+         "Probability" : 2,
+		 "Description": "haunted."
 		}
 	],
 	"MagicEvent" : [
@@ -1305,7 +1348,7 @@
 	],
 	"BodyType1" : [
 		{"Description": "thin",      
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor", "Destitute", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "lanky",     
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
@@ -1314,10 +1357,10 @@
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "careworn",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Destitute", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
 		},
 		{"Description": "gaunt",     
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Destitute", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "stocky",    
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
@@ -1326,20 +1369,20 @@
 		 "Tags": ["Rich", "Average", "Poor", "Male", "Adult", "Middle Age" ]
 		},
 		{"Description": "small",     
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Destitute", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "petite",    
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "thickset",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor", "Female", "Destitute", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "chubby",     
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
 	],
 	"BodyType2" : [
 		{"Description": "thin",     
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor",  "Destitute","Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "massive",  
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
@@ -1351,112 +1394,125 @@
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "lanky",    
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		 "Tags": ["Rich", "Average", "Poor", "Destitute", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
 		{"Description": "stout",     
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		 }
 	],
 	"Countenance" : [
-		{"Description": "{Rugged}", 
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "{Rugged}", 
-		 "Tags": [ "Average", "Poor", "Male", "Adult", "Middle Age", "Old"]
+        {"Description": "{Rugged}", 
+        "Probability": 2,  
+		 "Tags": [ "Average", "Poor", "Male", "Destitute", "Adult", "Middle Age", "Old"]
 		},
 		{"Description": "{Attractive}", 
-		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "{Attractive}", 
-		"Tags": ["Rich", "Average", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "{Attractive}", 
+        "Probability": 3,  
 		"Tags": ["Rich", "Average", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Adolescent"]
 		},
 		{"Description": "{Serious}",
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
-		},
-		{"Description": "{Serious}",
+        "Probability": 2,  
 		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
 		},
-		{"Description": "{Harrowed}",   
-		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
-		},
-		{"Description": "{Harrowed}",   
-		"Tags": ["Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent"]
-		},
-		{"Description": "{Harrowed}",	
-		"Tags": ["Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+        {"Description": "{Harrowed}", 
+        "Probability": 3,  
+		"Tags": ["Rich", "Average", "Poor", "Destitute", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old"]
 		}
 	],
 	"Harrowed" : [
 		{"Description": "harrowed", 
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+            "Probability": 2,  
+		 "Tags": []
 		},
-		{"Description": "haunted",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		{"Description": "haunted",
+            "Probability": 2,    
+		 "Tags": []
 		},
-		{"Description": "gaunt",    
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		{"Description": "gaunt",  
+            "Probability": 2,    
+		 "Tags": []
 		},
-		{"Description": "pallid",   
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
+		{"Description": "pallid", 
+            "Probability": 2,    
+		 "Tags": []
 		},
 		{"Description": "striking",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
+            "Probability": 2,  
+		 "Tags": []}
 	],
 	"Serious" : [
 		{"Description": "serious", 
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "severe",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "severe", 
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "striking",
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "sharp",   
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "earnest",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]}
-	],
+            "Probability": 2,    
+         "Tags": []
+        }
+    ],
 	"Attractive" : [
 		{"Description": "lovely",  
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "attractive",  "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age"]
-		},
-		{"Description": "beautiful",   "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "attractive",
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "beautiful",
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "charming",
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "alluring",
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age"]
-		},
-		{"Description": "comely",   
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male", "Adult", "Middle Age", "Adolescent"]}
-	],
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "comely", 
+            "Probability": 2,    
+         "Tags": []
+        }
+    ],
 	"Rugged" : [
-		{"Description": "rugged",      
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
-		},
-		{"Description": "ruddy",      
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent", "Young Child"]
-		},
-		{"Description": "craggy",      
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old"]
-		},
-		{"Description": "worn",      
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
-		},
+		{"Description": "rugged",  
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "ruddy",  
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "craggy",   
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "worn",  
+            "Probability": 2,    
+         "Tags": []
+        },
 		{"Description": "weather-beaten",  
-		"Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old", "Adolescent"]
-		},
-		{"Description": "harsh",        
-		 "Tags": ["Rich", "Average", "Poor", "Female", "Androgenous", "Male","Adult", "Middle Age", "Old"]}
-	],
+            "Probability": 2,    
+         "Tags": []
+        },
+		{"Description": "harsh", 
+            "Probability": 2,    
+         "Tags": []
+        }
+    ],
 	"Disfigurement" : [
 		{"Description": "Large scar on their {BodyPart}"},
 		{"Description": "Missing {BodyExtremity}"}
